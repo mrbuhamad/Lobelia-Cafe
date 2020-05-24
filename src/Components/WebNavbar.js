@@ -5,10 +5,8 @@ function WebNavbar() {
   return (
     <div>
       <header id="home">
-        {/* <!-- Start Navigation --> */}
         <nav className="navbar navbar-default navbar-fixed navbar-transparent dark bootsnav shadow-less">
           <div className="container">
-            {/* <!-- Start Atribute Navigation --> */}
             <div className="attr-nav">
               <ul>
                 <li className="side-menu">
@@ -18,9 +16,7 @@ function WebNavbar() {
                 </li>
               </ul>
             </div>
-            {/* <!-- End Atribute Navigation --> */}
 
-            {/* <!-- Start Header Navigation --> */}
             <div className="navbar-header">
               <button
                 type="button"
@@ -45,9 +41,7 @@ function WebNavbar() {
                 />
               </a>
             </div>
-            {/* <!-- End Header Navigation --> */}
 
-            {/* <!-- Collect the nav links, forms, and other content for toggling --> */}
             <div className="collapse navbar-collapse" id="navbar-menu">
               <ul
                 className="nav navbar-nav navbar-right"
@@ -73,10 +67,8 @@ function WebNavbar() {
                 </li>
               </ul>
             </div>
-            {/* <!-- /.navbar-collapse --> */}
           </div>
 
-          {/* <!-- Start Side Menu --> */}
           <div className="side">
             <a href="#" className="close-side">
               <i className="fa fa-times"></i>
@@ -157,11 +149,8 @@ function WebNavbar() {
               </ul>
             </div>
           </div>
-          {/* <!-- End Side Menu --> */}
         </nav>
-        {/* <!-- End Navigation --> */}
       </header>
-      {/* <!-- End Header --> */}
     </div>
   );
 }

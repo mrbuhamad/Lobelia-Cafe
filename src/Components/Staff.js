@@ -20,7 +20,6 @@ function Footer() {
         </div>
         <div className="row">
           <div className="chef-items">
-            {/* <!-- Single Item --> */}
             <div className="col-md-4 single-item">
               <div className="item">
                 <div className="thumb">
@@ -62,8 +61,6 @@ function Footer() {
                 </div>
               </div>
             </div>
-            {/* <!-- End Single Item -->
-            <!-- Single Item --> */}
             <div className="col-md-4 single-item">
               <div className="item">
                 <div className="thumb">
@@ -105,8 +102,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            {/* <!-- End Single Item -->
-            <!-- Single Item --> */}
+
             <div className="col-md-4 single-item">
               <div className="item">
                 <div className="thumb">
@@ -148,7 +144,6 @@ function Footer() {
                 </div>
               </div>
             </div>
-            {/* <!-- End Single Item --> */}
           </div>
         </div>
       </div>

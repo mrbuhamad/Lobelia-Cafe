@@ -3,7 +3,6 @@ import "../style.css";
 
 function Reservations() {
   return (
-    //  <!-- Start About
     <div className="about-area default-padding">
       <div className="container">
         <div className="row">
@@ -48,7 +47,6 @@ function Reservations() {
                 </li>
               </ul>
             </div>
-            {/* <!-- Start Form --> */}
             <div className="col-md-5 form">
               <div className="form-box">
                 <div className="icon">
@@ -109,7 +107,6 @@ function Reservations() {
                 </form>
               </div>
             </div>
-            {/* <!-- End Form --> */}
           </div>
         </div>
       </div>

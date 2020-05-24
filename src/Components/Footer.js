@@ -7,7 +7,6 @@ function Footer() {
       <div className="container">
         <div className="row">
           <div className="f-items col-4 title-effect text-light default-padding">
-            {/* <!-- Single Item --> */}
             <div className="col-md-3 col-sm-6  equal-height item">
               <div className="f-item address">
                 <img src="assets/img/logo-light.png" alt="Logo" />
@@ -28,9 +27,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            {/* <!-- End Single Item --> */}
 
-            {/* <!-- Single Item --> */}
             <div className="col-md-3 col-sm-6  equal-height item">
               <div className="f-item link">
                 <h4>Food Menu</h4>
@@ -53,9 +50,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            {/* <!-- End Single Item --> */}
 
-            {/* <!-- Single Item --> */}
             <div className="col-md-3 col-sm-6  equal-height item">
               <div className="f-item inst-feed">
                 <h4>Instagram Feed</h4>
@@ -93,9 +88,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            {/* <!-- End Single Item --> */}
 
-            {/* <!-- Single Item --> */}
             <div className="col-md-3 col-sm-6 equal-height item">
               <div className="f-item opening-hours">
                 <h4>Opening Hours</h4>
@@ -119,11 +112,9 @@ function Footer() {
                 </ul>
               </div>
             </div>
-            {/* <!-- End Single Item --> */}
           </div>
         </div>
       </div>
-      {/* <!-- Start Footer Bottom --> */}
       <div className="footer-bottom bg-dark text-light">
         <div className="container">
           <div className="row">
@@ -149,7 +140,6 @@ function Footer() {
           </div>
         </div>
       </div>
-      {/* <!-- End Footer Bottom --> */}
     </footer>
   );
 }
