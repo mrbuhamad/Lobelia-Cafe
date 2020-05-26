@@ -1,5 +1,4 @@
 const catagory = [
-  ,
   "Appetizers",
 
   "Main Course",

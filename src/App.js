@@ -4,6 +4,7 @@ import "./style.css";
 // components
 import WebNavbar from "./Components/WebNavbar";
 import Banner from "./Components/Banner";
+import Serveses from "./Components/Serveses";
 import Reservations from "./Components/Reservations";
 import Menu from "./Components/Menu";
 import Staff from "./Components/Staff";
@@ -15,6 +16,7 @@ function App() {
       <WebNavbar />
       <Banner />
       <Reservations />
+      <Serveses />
       <Menu />
       <Staff />
       <Footer />

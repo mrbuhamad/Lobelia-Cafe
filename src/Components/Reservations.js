@@ -1,117 +1,131 @@
-import React from "react";
+import React, { Component } from "react";
 import "../style.css";
+import { Select, MenuItem } from "@material-ui/core";
 
-function Reservations() {
-  return (
-    <div className="about-area default-padding">
-      <div className="container">
-        <div className="row">
-          <div className="about-items">
-            <div className="col-md-7 info">
-              <h3>Our Story</h3>
-              <h2>
-                Until I discovered cooking I was never
-                <br /> really interested in anything
-              </h2>
-              <p>
-                Pleased anxious or as in by viewing forbade minutes prevent. Too
-                leave had those get being led weeks blind. Had men rose from
-                down lady able. Its son him ferrars proceed six parlors.
-              </p>
-              <p>
-                Advanced diverted domestic sex repeated bringing you old.
-                Possible procured her trifling laughter thoughts property she
-                met way. Companions shy had solicitude favourable own. Which
-                could saw guest man now heard but. Lasted my coming uneasy
-                marked so should. Gravity letters it amongst herself dearest an
-                windows by. Wooded ladies she basket.
-              </p>
-              <ul>
-                <li>
+class Reservations extends Component {
+  state = {
+    type: "cake",
+    name: "",
+  };
+
+  handleChangeType = (event) => {
+    console.log(event.target.value);
+    this.setState({ type: event.target.value });
+  };
+
+  handleChangeName = (event) => {
+    console.log(event);
+    this.setState({ name: event.target.value });
+  };
+
+  render() {
+    return (
+      <div className="about-area default-padding">
+        <div className="container">
+          <div className="row">
+            <div className="about-items">
+              <div className="col-md-7 info">
+                <h3>Our Story</h3>
+                <h2>
+                  Until I discovered cooking I was never
+                  <br /> really interested in anything
+                </h2>
+                <p>whrite somthing</p>
+                <p>test test</p>
+                <ul>
+                  <li>
+                    <div className="icon">
+                      <i className="fas fa-phone"></i>
+                    </div>
+                    <div className="info">
+                      <h4>Phone</h4>
+                      <span>+123 456 7890</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="icon">
+                      <i className="fas fa-envelope-open"></i>
+                    </div>
+                    <div className="info">
+                      <h4>Eamil</h4>
+                      <span>support@restcafe.com</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-md-5 form">
+                <div className="form-box">
                   <div className="icon">
-                    <i className="fas fa-phone"></i>
+                    <i className="fas fa-utensils"></i>
                   </div>
-                  <div className="info">
-                    <h4>Phone</h4>
-                    <span>+123 456 7890</span>
-                  </div>
-                </li>
-                <li>
-                  <div className="icon">
-                    <i className="fas fa-envelope-open"></i>
-                  </div>
-                  <div className="info">
-                    <h4>Eamil</h4>
-                    <span>support@restcafe.com</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="col-md-5 form">
-              <div className="form-box">
-                <div className="icon">
-                  <i className="fas fa-utensils"></i>
+                  <h3>Make a Reservation</h3>
+                  <form action="#">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <Select
+                          variant="outlined"
+                          labelId="label"
+                          id="select"
+                          value={this.state.type}
+                          onChange={this.handleChangeType}
+                        >
+                          <option value="big">Big Hut</option>
+                          <option value="cake">Cake Room</option>
+                          <option value="backyard">Backyard Garden</option>
+                          <option value="Small">Small Hut</option>
+                        </Select>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            className="form-control"
+                            id="name"
+                            name="name"
+                            placeholder="Name"
+                            type="text"
+                            value={this.state.name}
+                            onChange={this.handleChangeName}
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            className="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            type="email"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            className="form-control"
+                            id="date"
+                            name="date"
+                            placeholder="Date"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <button type="submit" name="submit" id="submit">
+                          Book Now
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                <h3>Book a table</h3>
-                <form action="#">
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <input
-                          className="form-control"
-                          id="name"
-                          name="name"
-                          placeholder="Name"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <input
-                          className="form-control"
-                          id="email"
-                          name="email"
-                          placeholder="Email"
-                          type="email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <select>
-                          <option value="1">1 Person</option>
-                          <option value="2">2 Person</option>
-                          <option value="4">3 Person</option>
-                          <option value="5">4 Person</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <input
-                          className="form-control"
-                          id="date"
-                          name="date"
-                          placeholder="Date"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <button type="submit" name="submit" id="submit">
-                        Book Now
-                      </button>
-                    </div>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Reservations;

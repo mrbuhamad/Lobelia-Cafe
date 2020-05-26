@@ -73,12 +73,11 @@ class Menu extends Component {
                   </button>
                   {catagory}
                 </div>
-                {/* <!-- End Mixitup Nav--> */}
 
                 <div className="row text-center masonary">
                   <div
                     id="portfolio-grid"
-                    className="menu-lists text-center col-3"
+                    className="menu-lists text-center  col-3   "
                   >
                     {menuCard}
                   </div>
