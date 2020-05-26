@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../style.css";
-import { Select, MenuItem } from "@material-ui/core";
+import { NativeSelect, Box, MenuItem } from "@material-ui/core";
 
 class Reservations extends Component {
   state = {
@@ -62,18 +62,20 @@ class Reservations extends Component {
                   <form action="#">
                     <div className="row">
                       <div className="col-md-12">
-                        <Select
-                          variant="outlined"
-                          labelId="label"
-                          id="select"
-                          value={this.state.type}
-                          onChange={this.handleChangeType}
-                        >
-                          <option value="big">Big Hut</option>
-                          <option value="cake">Cake Room</option>
-                          <option value="backyard">Backyard Garden</option>
-                          <option value="Small">Small Hut</option>
-                        </Select>
+                        <Box my={2}>
+                          <NativeSelect
+                            // variant="outlined"
+                            value={this.state.type}
+                            onChange={this.handleChangeType}
+                            fullWidth
+                            fontSize={30}
+                          >
+                            <option value="big">Big Hut</option>
+                            <option value="cake">Cake Room</option>
+                            <option value="backyard">Backyard Garden</option>
+                            <option value="Small">Small Hut</option>
+                          </NativeSelect>
+                        </Box>
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
