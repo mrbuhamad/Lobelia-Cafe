@@ -49,10 +49,7 @@ class Reservations extends Component {
                 <p>test test</p>
                 <ul>
                   <li>
-                    <a
-                      href="https://api.whatsapp.com/send?phone=0096599515445"
-                      // style={{ padding: 0, border: "none", background: "none" }}
-                    >
+                    <a href="https://api.whatsapp.com/send?phone=0096599515445">
                       <div className="icon">
                         <i className="fab fa-whatsapp-square"></i>
                       </div>
