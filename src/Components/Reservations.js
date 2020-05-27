@@ -49,9 +49,9 @@ class Reservations extends Component {
                 <p>test test</p>
                 <ul>
                   <li>
-                    <button
+                    <a
                       href="https://api.whatsapp.com/send?phone=0096599515445"
-                      style={{ padding: 0, border: "none", background: "none" }}
+                      // style={{ padding: 0, border: "none", background: "none" }}
                     >
                       <div className="icon">
                         <i className="fab fa-whatsapp-square"></i>
@@ -60,7 +60,7 @@ class Reservations extends Component {
                         <h4>whatsapp</h4>
                         <span>+965 9951 5445</span>
                       </div>
-                    </button>
+                    </a>
                   </li>
                   <li>
                     <div className="icon">
