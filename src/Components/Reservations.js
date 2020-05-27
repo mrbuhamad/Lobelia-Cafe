@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import "../style.css";
-import { NativeSelect, Select, Box, MenuItem } from "@material-ui/core";
+import {
+  Typography,
+  Link,
+  Select,
+  Box,
+  MenuItem,
+  Grid,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+} from "@material-ui/core";
 
 class Reservations extends Component {
   state = {
@@ -9,14 +19,30 @@ class Reservations extends Component {
   };
 
   handleChangeType = (event) => {
-    console.log(event.target.value);
-    this.setState({ type: event.target.value });
+    console.log(event);
+
+    this.setState({ type: event });
   };
 
   handleChangeName = (event) => {
     console.log(event);
     this.setState({ name: event.target.value });
   };
+
+  selection = ["Big Hut", "Cake Room", "Backyard Garden", "Small Hut"].map(
+    (item) => {
+      return (
+        <button
+          className={item === this.state.selectedCat ? "active" : ""}
+          onClick={() => {
+            this.handleChangeType(item);
+          }}
+        >
+          {item}
+        </button>
+      );
+    }
+  );
 
   render() {
     return (
@@ -25,22 +51,27 @@ class Reservations extends Component {
           <div className="row">
             <div className="about-items">
               <div className="col-md-7 info">
-                <h3>Our Story</h3>
-                <h2>
-                  Until I discovered cooking I was never
-                  <br /> really interested in anything
-                </h2>
+                <h3>Choose Your Room</h3>
+                <div className="mix-item-menu text-center">
+                  {this.selection}
+                </div>
+
                 <p>whrite somthing</p>
                 <p>test test</p>
                 <ul>
                   <li>
-                    <div className="icon">
-                      <i className="fas fa-phone"></i>
-                    </div>
-                    <div className="info">
-                      <h4>Phone</h4>
-                      <span>+123 456 7890</span>
-                    </div>
+                    <button
+                      href="https://api.whatsapp.com/send?phone=0096599515445"
+                      style={{ padding: 0, border: "none", background: "none" }}
+                    >
+                      <div className="icon">
+                        <i className="fab fa-whatsapp-square"></i>
+                      </div>
+                      <div className="info">
+                        <h4>whatsapp</h4>
+                        <span>+965 9951 5445</span>
+                      </div>
+                    </button>
                   </li>
                   <li>
                     <div className="icon">
@@ -48,7 +79,7 @@ class Reservations extends Component {
                     </div>
                     <div className="info">
                       <h4>Eamil</h4>
-                      <span>support@restcafe.com</span>
+                      <span>lobelia.cafe@hotmail.com</span>
                     </div>
                   </li>
                 </ul>
