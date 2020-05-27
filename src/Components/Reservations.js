@@ -1,16 +1,5 @@
 import React, { Component } from "react";
 import "../style.css";
-import {
-  Typography,
-  Link,
-  Select,
-  Box,
-  MenuItem,
-  Grid,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
-} from "@material-ui/core";
 
 class Reservations extends Component {
   state = {
@@ -93,23 +82,6 @@ class Reservations extends Component {
                   <form action="#">
                     <div className="row">
                       <div className="col-md-12">
-                        <Box my={2}>
-                          <Select
-                            variant="outlined"
-                            value={this.state.type}
-                            onChange={this.handleChangeType}
-                            fullWidth
-                          >
-                            <MenuItem value="big">Big Hut</MenuItem>
-                            <MenuItem value="cake">Cake Room</MenuItem>
-                            <MenuItem value="backyard">
-                              Backyard Garden
-                            </MenuItem>
-                            <MenuItem value="Small">Small Hut</MenuItem>
-                          </Select>
-                        </Box>
-                      </div>
-                      <div className="col-md-12">
                         <div className="form-group">
                           <input
                             className="form-control"
@@ -119,6 +91,17 @@ class Reservations extends Component {
                             type="text"
                             value={this.state.name}
                             onChange={this.handleChangeName}
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            className="form-control"
+                            id="number"
+                            name="number"
+                            placeholder="number"
+                            type="text"
                           />
                         </div>
                       </div>
