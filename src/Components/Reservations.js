@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import "../style.css";
 
+// data
+import roomType from "../roomTypeData";
+
+// componenets
+import HutCard from "./HutCard";
+
 class Reservations extends Component {
   state = {
-    type: "cake",
+    type: "Small Hut",
     name: "",
   };
 
@@ -18,22 +24,26 @@ class Reservations extends Component {
     this.setState({ name: event.target.value });
   };
 
-  selection = ["Big Hut", "Cake Room", "Backyard Garden", "Small Hut"].map(
-    (item) => {
-      return (
-        <button
-          className={item === this.state.selectedCat ? "active" : ""}
-          onClick={() => {
-            this.handleChangeType(item);
-          }}
-        >
-          {item}
-        </button>
-      );
-    }
-  );
+  selection = roomType.map((item) => {
+    return (
+      <button
+        className={item.roomName === this.state.selectedCat ? "active" : ""}
+        onClick={() => {
+          this.handleChangeType(item.roomName);
+        }}
+      >
+        {item.roomName}
+      </button>
+    );
+  });
 
   render() {
+    const hutcard = roomType.find((item) => {
+      if (item.roomName === this.state.type) {
+        return true;
+      }
+    });
+
     return (
       <div className="about-area default-padding">
         <div className="container">
@@ -45,30 +55,7 @@ class Reservations extends Component {
                   {this.selection}
                 </div>
 
-                <p>whrite somthing</p>
-                <p>test test</p>
-                <ul>
-                  <li>
-                    <a href="https://api.whatsapp.com/send?phone=0096599515445">
-                      <div className="icon">
-                        <i className="fab fa-whatsapp-square"></i>
-                      </div>
-                      <div className="info">
-                        <h4>whatsapp</h4>
-                        <span>+965 9951 5445</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <div className="icon">
-                      <i className="fas fa-envelope-open"></i>
-                    </div>
-                    <div className="info">
-                      <h4>Eamil</h4>
-                      <span>lobelia.cafe@hotmail.com</span>
-                    </div>
-                  </li>
-                </ul>
+                <HutCard room={hutcard} />
               </div>
               <div className="col-md-5 form">
                 <div className="form-box">
@@ -76,6 +63,9 @@ class Reservations extends Component {
                     <i className="fas fa-utensils"></i>
                   </div>
                   <h3>Make a Reservation</h3>
+                  <h4>
+                    {hutcard.roomName} {hutcard.price}KD
+                  </h4>
                   <form action="#">
                     <div className="row">
                       <div className="col-md-12">
