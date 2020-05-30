@@ -5,6 +5,12 @@ function HutCard(props) {
   let room = props.room;
   return (
     <>
+      <div className="thumb">
+        <a href="#">
+          <img src={room.image} alt="Thumb" />
+        </a>
+      </div>
+      <p> </p>
       <p>{room.discribtion}</p>
       <ul>
         <li>total price {room.price} kd</li>
@@ -40,6 +46,9 @@ function HutCard(props) {
           </div>
         </li>
       </ul>
+      <a className="col-md-12 button-about" href="#resform">
+        Book Now
+      </a>
     </>
   );
 }

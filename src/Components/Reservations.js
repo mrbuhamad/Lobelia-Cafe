@@ -57,7 +57,7 @@ class Reservations extends Component {
 
                 <HutCard room={hutcard} />
               </div>
-              <div className="col-md-5 form">
+              <div id="resform" className="col-md-5 form">
                 <div className="form-box">
                   <div className="icon">
                     <i className="fas fa-utensils"></i>
