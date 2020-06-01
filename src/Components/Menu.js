@@ -74,14 +74,7 @@ class Menu extends Component {
                   {catagory}
                 </div>
 
-                <div className="row text-center masonary">
-                  <div
-                    id="portfolio-grid"
-                    className="menu-lists text-center  col-3   "
-                  >
-                    {menuCard}
-                  </div>
-                </div>
+                <div className="row ">{menuCard}</div>
               </div>
             </div>
           </div>
