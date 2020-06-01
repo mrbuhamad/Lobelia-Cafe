@@ -7,7 +7,6 @@ function MenuCard(props) {
     <div
       id="portfolio-grid"
       className="menu-lists text-center  col-12 col-md-3  "
-      style={{ width: "3ram" }}
     >
       <div className="item-single pf-item ">
         <div className="item">

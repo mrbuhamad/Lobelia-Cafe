@@ -16,7 +16,7 @@ class Menu extends Component {
 
   handlefilter = (catagory) => {
     this.setState({ selectedCat: catagory });
-    if (catagory === "ALL") {
+    if (catagory === "All") {
       this.setState({ filterdMenu: menu });
     } else {
       const filterdMenu = menu.filter((item) => {
