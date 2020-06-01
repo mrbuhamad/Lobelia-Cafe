@@ -36,15 +36,6 @@ function HutCard(props) {
             </div>
           </a>
         </li>
-        <li>
-          <div className="icon">
-            <i className="fas fa-envelope-open"></i>
-          </div>
-          <div className="info">
-            <h4>Eamil</h4>
-            <span>lobelia.cafe@hotmail.com</span>
-          </div>
-        </li>
       </ul>
       <a className="col-md-12 button-about" href="#resform">
         Book Now

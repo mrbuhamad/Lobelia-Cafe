@@ -4874,7 +4874,8 @@ footer.shadow .footer-bottom {
   transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   text-align: center;
+  align-items: center;
   border-radius: 10px;
   margin-top: 10px;
-  /* position: relative; */
+  position: relative;
 }
