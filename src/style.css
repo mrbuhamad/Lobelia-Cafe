@@ -1929,6 +1929,10 @@ body,
   border-radius: inherit;
   text-align: center;
 }
+::-webkit-input-placeholder {
+  color: red;
+  text-align: center;
+}
 
 .about-area .form-box button {
   padding: 10px 40px;

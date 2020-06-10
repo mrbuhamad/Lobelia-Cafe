@@ -1,6 +1,6 @@
 const roomType = [
   {
-    id: 1,
+    id: 5894860,
     roomName: "Big Hut",
     numbofGuests: "8 to 10 Guests",
     foodPrice: "40",
@@ -10,7 +10,7 @@ const roomType = [
     image: "https://source.unsplash.com/1600x900/?Fries",
   },
   {
-    id: 2,
+    id: 5894861,
     roomName: "Cake Room",
     numbofGuests: "3 to 6 Guests",
     foodPrice: "20",
@@ -20,7 +20,7 @@ const roomType = [
     image: "https://source.unsplash.com/1600x900/?Shrimp",
   },
   {
-    id: 3,
+    id: 6004418,
     roomName: "Small Hut",
     numbofGuests: "2 to 4 Guests",
     foodPrice: "15",
@@ -30,7 +30,7 @@ const roomType = [
     image: "https://source.unsplash.com/1600x900/?cheese  ",
   },
   {
-    id: 3,
+    id: 5959240,
     roomName: "Backyard Garden",
     numbofGuests: "3 to 6 Guests",
     foodPrice: "20",
