@@ -104,6 +104,7 @@ class Reservations extends Component {
         color_comment: "test colour comments ",
       },
     };
+    console.log("data: ", data);
     reservationStrore.reserv(data);
   };
 

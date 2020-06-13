@@ -8,14 +8,15 @@ const instance = axios.create({
 
 class ReservationStrore {
   reservationData = null;
-  reserv = async (data) => {
+  reserv = async (reserv) => {
     try {
-      const res = await instance.post("events", data);
-      const data = res.data;
-      this.reservationData = data;
-      console.log("res created", data);
+      instance.defaults.headers.common.Authorization = `Teamup-Token: 271761f6d0a737d8a4092d2d5479d8abc9faaf5b6c54bb9007a1653f3ec12654`;
+      const res = await instance.post("events", reserv);
+      this.reservationData = res.data;
+      console.log("res created", res.data);
     } catch (err) {
       console.log(err);
+
       console.log("something went wrong reserving");
     }
   };
